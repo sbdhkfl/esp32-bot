@@ -1,0 +1,7 @@
+#pragma once
+
+// Copy this file to local_config.h and enter your own Wi-Fi details.
+// local_config.h is ignored by Git.
+
+#define WIFI_SSID "PUT_WIFI_NAME_HERE"
+#define WIFI_PASSWORD "PUT_WIFI_PASSWORD_HERE"
