@@ -1,33 +1,29 @@
 # 03 - Complete Hardware List
 
-This document is the hardware baseline for the ESP32 bot project.
+This is the hardware list for the ESP32 bot.
 
-## Core
-
+## Core hardware
 | Hardware | Qty | Purpose |
 |---|---:|---|
-| ESP32 Xiaozhi-compatible board | 1 | Main voice/AI client |
-| USB/data cable appropriate to board | 1 | Programming and power |
-| Speaker/audio amplifier hardware from the build | 1 set | Audio output |
-| Microphone hardware supported by the selected board/build | 1 | Voice input |
+| ESP32 XiaoZhi-compatible board | 1 | Main voice bot |
+| USB/data cable for the board | 1 | Programming and power |
+| Speaker/audio amplifier hardware | 1 set | Audio output |
+| Microphone supported by the selected board/build | 1 | Voice input |
 
-## Optional/feature hardware used in the project history
-
-- L293D motor driver/shield if the bot is built as a moving car
+## Moving-car hardware
+If we build the bot into a moving car, the hardware is:
+- L293D motor driver/shield
 - DC gear motors
-- robot chassis and wheels
-- battery/power system appropriate to the selected motor driver
-- buttons for local controls
-- sensors added by the specific firmware
+- Robot chassis and wheels
+- Battery/power system that matches the motor driver
 
 ## MCP/server side
-
-The bot can connect to the local MCP endpoint for tools such as:
+The ESP32 can connect to the MCP endpoint for tools such as:
 - Wikipedia lookup
-- YouTube playback control through the configured integration
+- YouTube playback
+- Email features when configured
 
-The MCP server is separate from the ESP32 hardware and must never require secrets to be committed to the repository.
+The MCP server is separate from the ESP32 hardware.
 
 ## Project rule
-
-Keep the ESP32 firmware lightweight. Heavy processing and external tool integrations belong on the server side.
+Keep the ESP32 firmware lightweight. Bigger processing and external tools belong on the server side.
