@@ -1,37 +1,40 @@
 # ESP32 XiaoZhi Bot 🤖
 
-A beginner-friendly project for building an ESP32 XiaoZhi-style voice assistant.
+This is the ESP32 voice bot project we have been building.
 
-## What this repository contains
+The idea is pretty simple: the ESP32 handles the bot side, Wi-Fi connects it to the services, and the server side can give it extra tools.
 
-- A simple ESP32 Wi-Fi test firmware
-- Beginner setup and wiring guides
-- Safe configuration templates with no passwords or API keys
-- Documentation for connecting optional MCP tools
-
-> This repository is the easy-to-understand project layer. The full upstream XiaoZhi voice firmware is maintained separately.
+## What is in here
+- ESP32 Wi-Fi test firmware
+- Beginner setup guides
+- Wiring guides
+- Safe configuration templates
+- MCP tool setup
+- Debugging and testing steps
 
 ## The big picture
+Think of it like a tiny team:
 
-Think of the bot like a tiny team:
+1. 🎤 The microphone hears you.
+2. 🧠 The XiaoZhi firmware handles the voice-assistant side.
+3. 📡 Wi-Fi connects the ESP32 to the server.
+4. 🧰 MCP gives the bot extra tools.
+5. 🔊 The speaker lets it talk back.
 
-1. 🎤 Microphone hears you.
-2. 🧠 XiaoZhi firmware handles the voice-assistant job.
-3. 📡 Wi-Fi connects the ESP32 to the internet/server.
-4. 🧰 MCP tools give the assistant extra abilities.
-5. 🔊 Speaker/amplifier lets the bot talk back.
-
-## Upstream XiaoZhi firmware
-
-https://github.com/78/xiaozhi-esp32
+## Tools we are building around it
+- Wikipedia lookup
+- YouTube playback through the configured integration
+- Email features when configured
 
 ## Start here
-
 1. Read docs/START_HERE.md.
-2. Copy firmware/wifi_test/local_config.h.example to firmware/wifi_test/local_config.h.
+2. Copy the local Wi-Fi config example to the real local config file.
 3. Put your Wi-Fi details in that local file.
 4. Upload the Wi-Fi test firmware.
-5. Only after Wi-Fi works, move on to the XiaoZhi voice firmware.
-6. Then add MCP tools such as Wikipedia, YouTube, and email.
+5. Make sure Wi-Fi works before moving to the voice features.
+6. Then add the MCP tools one at a time.
 
-Never upload passwords, API keys, access tokens, or private URLs to GitHub.
+## One big rule
+Never put passwords, API keys, access tokens, or private URLs into GitHub.
+
+The full upstream XiaoZhi firmware is maintained separately, while this repo is the easier project layer around it.
