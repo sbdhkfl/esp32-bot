@@ -1,42 +1,44 @@
 # 04 - Complete Wiring
 
-## Core voice bot
+This is the wiring plan for the ESP32 bot.
 
-Use the exact connector labels printed on the specific Xiaozhi-compatible ESP32 board because audio pins differ between board designs.
-
-### Power/programming
+## 1. Programming and power
 ESP32 board <-> USB data cable <-> computer during flashing.
 
-### Speaker
-If the board has an onboard amplifier/speaker connector, use the documented connector.
+Use the USB connection that belongs to your exact board.
 
-If an external amplifier is used:
-ESP32 audio output -> amplifier input -> speaker.
+## 2. Speaker
+If the board has a speaker connector or onboard audio output, use the connection shown by that board documentation.
 
-Never connect a speaker requiring an amplifier directly to a GPIO.
+If an external amplifier is being used:
 
-### Microphone
-If the board has an onboard microphone, no external microphone wiring is needed.
+**ESP32 audio output -> amplifier input -> speaker**
 
-If the build uses an external digital microphone, wire according to that microphone's interface (I2S/I2C/analog) and the exact firmware pin configuration.
+Do not connect a speaker that needs an amplifier directly to a GPIO.
 
-## Moving-car variant
+## 3. Microphone
+If the board already has a microphone, there is no extra microphone wiring.
 
-If the ESP32 bot uses the L293D shield:
-- ESP32 control signals -> the shield's supported control inputs
-- motors -> the shield motor outputs
-- motor power -> the shield motor supply
-- ESP32 power -> its regulated supply
-- common signal ground between controller and driver
+If the build uses an external microphone, the wiring depends on whether it is I2S, I2C, analog, or another supported interface.
 
-Do not power motors from an ESP32 GPIO.
+The exact pins need to match the exact board and firmware.
 
-## MCP connectivity
+## 4. Moving-car version
+If the ESP32 bot is also a car:
+- ESP32 control signals -> L293D control inputs
+- Motors -> L293D motor outputs
+- Motor battery -> L293D motor power input
+- ESP32 -> its own regulated power
+- Common signal ground between controller and driver
 
-ESP32 -> Wi-Fi -> local/server MCP endpoint.
+Never power the motors from an ESP32 GPIO.
 
-No direct electrical wiring is needed for Wikipedia or YouTube tools.
+## 5. MCP connection
+**ESP32 -> Wi-Fi -> MCP endpoint**
 
-## Why exact pins are configuration-dependent
+Wikipedia, YouTube, and email tools do not need extra electrical wiring.
 
-ESP32 boards sold under similar names can route audio, buttons, LEDs, and motor-control signals differently. The firmware's pin definitions must match the exact board revision instead of guessing.
+## 6. Important board rule
+ESP32 boards that look similar can have different audio pins, buttons, LEDs, and other connections.
+
+So we use the exact board pinout instead of guessing.
