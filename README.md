@@ -69,3 +69,12 @@ Use PlatformIO in VS Code for:
 - Firmware debugging
 
 Keep Wi-Fi passwords, email credentials, API keys, access tokens, and private URLs out of GitHub.
+
+## Simple one-start workflow
+
+On a computer or device with Python, use:
+
+./start.sh
+
+It starts the browser dashboard. ESP32 firmware work still uses PlatformIO because the firmware must be built and uploaded to the physical ESP32.
+
