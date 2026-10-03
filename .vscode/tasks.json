@@ -1,0 +1,1 @@
+{"version":"2.0.0","tasks":[{"label":"ESP32: build","type":"shell","command":"pio run","problemMatcher":[]},{"label":"ESP32: upload","type":"shell","command":"pio run -t upload","problemMatcher":[]},{"label":"ESP32: monitor","type":"shell","command":"pio device monitor -b 115200","problemMatcher":[]}]}
