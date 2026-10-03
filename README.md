@@ -40,4 +40,4 @@ Never put passwords, API keys, access tokens, or private URLs into GitHub.
 The full upstream XiaoZhi firmware is maintained separately, while this repo is the easier project layer around it.
 
 ## Run in VS Code
-Install the recommended PlatformIO extension. Open this repository, put your Wi-Fi details in `firmware/wifi_test/local_config.h`, then use **PlatformIO Build**, **Upload**, or **Serial Monitor**. The PlatformIO project now points directly at the Wi-Fi test firmware.
+Install the recommended PlatformIO extension and open this repository. Run python run.py when you want the browser dashboard; Chrome opens automatically. Use the normal PlatformIO Build, Upload, and Serial Monitor controls for the ESP32 firmware. The browser dashboard does not replace the firmware setup.
