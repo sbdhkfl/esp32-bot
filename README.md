@@ -38,3 +38,6 @@ Think of it like a tiny team:
 Never put passwords, API keys, access tokens, or private URLs into GitHub.
 
 The full upstream XiaoZhi firmware is maintained separately, while this repo is the easier project layer around it.
+
+## Run in VS Code
+Install the recommended PlatformIO extension. Open this repository, put your Wi-Fi details in `firmware/wifi_test/local_config.h`, then use **PlatformIO Build**, **Upload**, or **Serial Monitor**. The PlatformIO project now points directly at the Wi-Fi test firmware.
