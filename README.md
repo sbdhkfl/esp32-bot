@@ -41,3 +41,31 @@ The full upstream XiaoZhi firmware is maintained separately, while this repo is 
 
 ## Run in VS Code
 Install the recommended PlatformIO extension and open this repository. Run python run.py when you want the browser dashboard; Chrome opens automatically. Use the normal PlatformIO Build, Upload, and Serial Monitor controls for the ESP32 firmware. The browser dashboard does not replace the firmware setup.
+
+
+## Browser mode
+
+The ESP32 bot now has a simple Chrome dashboard for the project.
+
+### Start it
+
+Run:
+
+`python run.py`
+
+Chrome opens the dashboard automatically.
+
+The browser dashboard is an easy project control/info page. It does **not** replace the ESP32 firmware, PlatformIO, the microphone/audio hardware, or the MCP server.
+
+### ESP32 workflow
+
+Use the browser dashboard for the easy project interface.
+
+Use PlatformIO in VS Code for:
+
+- Build
+- Upload
+- Serial Monitor
+- Firmware debugging
+
+Keep Wi-Fi passwords, email credentials, API keys, access tokens, and private URLs out of GitHub.
