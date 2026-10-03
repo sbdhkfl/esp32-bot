@@ -7,7 +7,7 @@ class H(BaseHTTPRequestHandler):
     def do_GET(self):
         b=PAGE.encode(); self.send_response(200); self.send_header("Content-Type","text/html; charset=utf-8"); self.send_header("Content-Length",str(len(b))); self.end_headers(); self.wfile.write(b)
 if __name__=="__main__":
-    s=ThreadingHTTPServer((HOST,PORT),H); url=f"http://{HOST}:{PORT}"; print(url); webbrowser.open(url)
+    s=ThreadingHTTPServer((HOST,PORT),H); url=f"http://{HOST}:{PORT}"; print(url); open_chrome(url)
     try:s.serve_forever()
     except KeyboardInterrupt:pass
     finally:s.server_close()
